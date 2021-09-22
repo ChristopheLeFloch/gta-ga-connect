@@ -63,10 +63,10 @@ public class AccessToGAFromHRA  implements Filter {
 		
 			String response = "<html>";
 			response = response + "<body onload=\"document.createElement('form').submit.call(document.getElementById('submitForm'))\">";
-			response = response + "<form id='submitForm' action='https://j2gu2-front-j2g-sdev.paas-02.build.net.intra.laposte.fr/' method='POST' name='submitForm'>";
+			response = response + "<form id='submitForm' action='http://localhost:8888/ws/acces-depuis-gta' method='POST' name='submitForm'>";
 
 			response = response + "<input 	id='vsid' "
-					+ 	"name='com.hraccess.portal.connection.id' "
+					+ 	"name='vsid' "
 					+ 	"type='hidden' "
 					+	"value='" + cookie.getValue() +"'/>";
 			Map<String, Object> map = portalContext.getAttributes();
